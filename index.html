@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="TevetVault — Free study materials for Malawi TEVET students"/>
+<title>TevetVault - Student Resource Platform</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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"/>
+<link rel="apple-touch-icon" href="data:image/png;base64,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"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#0a1628;color:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* NAV */
+nav{padding:14px 20px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,22,40,.95);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.07)}
+.logo{font-size:20px;font-weight:800;color:#fff;letter-spacing:-.3px}
+.logo span{color:#f59e0b}
+.nav-btn{display:inline-flex;align-items:center;gap:7px;background:#22c55e;color:#fff;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;transition:all .15s}
+.nav-btn:hover{background:#16a34a}
+.nav-btn svg{width:15px;height:15px}
+
+/* HERO */
+.hero{padding:60px 20px 40px;text-align:center}
+.badge{display:inline-block;background:rgba(26,86,219,.2);border:1px solid rgba(26,86,219,.4);color:#93c5fd;padding:5px 14px;border-radius:999px;font-size:12px;font-weight:600;margin-bottom:20px}
+.hero h1{font-size:clamp(28px,7vw,50px);font-weight:800;line-height:1.1;letter-spacing:-1px;margin-bottom:14px}
+.hero h1 span{color:#f59e0b}
+.hero p{font-size:15px;color:rgba(255,255,255,.55);line-height:1.7;max-width:460px;margin:0 auto 32px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+.btn-download{display:inline-flex;align-items:center;gap:9px;background:#22c55e;color:#fff;padding:14px 26px;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;transition:all .2s}
+.btn-download:hover{background:#16a34a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(34,197,94,.3)}
+.btn-view{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.08);color:#fff;padding:14px 26px;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;transition:all .2s;border:1px solid rgba(255,255,255,.15)}
+.btn-view:hover{background:rgba(255,255,255,.13);transform:translateY(-2px)}
+.btn-download svg,.btn-view svg{width:18px;height:18px;flex-shrink:0}
+.btn-note{font-size:11px;color:rgba(255,255,255,.3);margin-top:6px;text-align:center}
+
+/* SCREENSHOTS */
+.screenshots{padding:10px 20px 60px}
+.section-label{text-align:center;font-size:11px;font-weight:700;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px}
+.screenshots-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.screenshot-wrap{flex-shrink:0;width:155px}
+.screenshot-frame{background:#1a1a2e;border-radius:22px;padding:7px;box-shadow:0 20px 40px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.08)}
+.screenshot-img{width:100%;height:270px;border-radius:17px;object-fit:cover;display:block;background:#1e293b}
+.screenshot-placeholder{width:100%;height:270px;border-radius:17px;background:linear-gradient(135deg,#1e3a5f,#1a2a45);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:rgba(255,255,255,.2);font-size:11px;font-weight:500;text-align:center;padding:12px}
+.screenshot-placeholder svg{width:26px;height:26px;stroke:rgba(255,255,255,.15);fill:none;stroke-width:1.5}
+.screenshot-caption{text-align:center;font-size:11px;color:rgba(255,255,255,.3);margin-top:8px;font-weight:500}
+
+/* DIVIDER */
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent);margin:0 20px}
+
+/* FEATURES */
+.features{padding:60px 20px}
+.section-title{font-size:22px;font-weight:800;text-align:center;margin-bottom:6px}
+.section-sub{text-align:center;font-size:14px;color:rgba(255,255,255,.4);margin-bottom:32px}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;max-width:900px;margin:0 auto}
+.feature{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:20px}
+.feature-icon{font-size:26px;margin-bottom:10px}
+.feature-title{font-size:14px;font-weight:700;margin-bottom:5px}
+.feature-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.6}
+
+/* INSTALL STEPS */
+.install{padding:60px 20px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.install-inner{max-width:580px;margin:0 auto}
+.steps{display:flex;flex-direction:column;gap:12px;margin-top:0}
+.step{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.03);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,.06)}
+.step-num{width:32px;height:32px;border-radius:50%;background:#1a56db;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;margin-top:1px}
+.step-text strong{color:#fff;display:block;margin-bottom:3px;font-size:14px}
+.step-text{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6}
+
+/* FAQ */
+.faq{padding:60px 20px}
+.faq-inner{max-width:680px;margin:0 auto}
+.faq-list{display:flex;flex-direction:column;gap:10px;margin-top:0}
+.faq-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background .15s}
+.faq-q:hover{background:rgba(255,255,255,.03)}
+.faq-q svg{width:16px;height:16px;stroke:rgba(255,255,255,.4);flex-shrink:0;transition:transform .25s}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s}
+.faq-a p{padding:0 20px 18px;font-size:13px;color:rgba(255,255,255,.5);line-height:1.7}
+.faq-item.open .faq-a{max-height:300px}
+.faq-item.open .faq-q svg{transform:rotate(45deg)}
+.faq-item.open .faq-q{background:rgba(26,86,219,.08)}
+
+/* CONTACT / FEEDBACK */
+.contact{padding:60px 20px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06)}
+.contact-inner{max-width:600px;margin:0 auto;text-align:center}
+.dev-card{background:linear-gradient(135deg,rgba(26,86,219,.15),rgba(59,111,240,.08));border:1px solid rgba(26,86,219,.25);border-radius:20px;padding:28px 24px;margin-bottom:28px}
+.dev-avatar{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,#1a56db,#3b6ff0);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:#fff;margin:0 auto 14px;box-shadow:0 4px 16px rgba(26,86,219,.35)}
+.dev-name{font-size:17px;font-weight:800;margin-bottom:2px}
+.dev-role{font-size:12px;color:rgba(255,255,255,.45);margin-bottom:4px}
+.dev-school{font-size:12px;color:#60a5fa;font-weight:600}
+.contact-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.contact-link{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;border-radius:10px;font-size:13px;font-weight:600;text-decoration:none;transition:all .15s;border:1px solid rgba(255,255,255,.1)}
+.contact-link:hover{transform:translateY(-1px)}
+.c-wa{background:rgba(37,211,102,.1);color:#25d366;border-color:rgba(37,211,102,.2)}
+.c-fb{background:rgba(24,119,242,.1);color:#1877f2;border-color:rgba(24,119,242,.2)}
+.c-em{background:rgba(234,88,12,.1);color:#fb923c;border-color:rgba(234,88,12,.2)}
+.c-gh{background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.1)}
+.contact-link svg{width:16px;height:16px;flex-shrink:0}
+
+/* CTA */
+.cta{padding:60px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+.cta h2{font-size:24px;font-weight:800;margin-bottom:10px}
+.cta p{font-size:14px;color:rgba(255,255,255,.45);margin-bottom:28px}
+
+/* FOOTER */
+footer{padding:24px 20px;border-top:1px solid rgba(255,255,255,.06);text-align:center}
+.footer-logo{font-size:16px;font-weight:800;margin-bottom:6px}
+.footer-logo span{color:#f59e0b}
+footer p{font-size:12px;color:rgba(255,255,255,.25);line-height:1.7}
+footer a{color:rgba(255,255,255,.35);text-decoration:none}
+
+@media(max-width:480px){
+  .btns{flex-direction:column;align-items:center}
+  .btn-download,.btn-view{width:100%;max-width:280px;justify-content:center}
+  .contact-links{flex-direction:column;align-items:center}
+  .contact-link{width:100%;max-width:260px;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo"><img src="data:image/png;base64,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" style="width:28px;height:28px;border-radius:7px;vertical-align:middle;margin-right:8px"/>Tevet<span>Vault</span></div>
+  <!-- APK LINK -->
+  <a href="TevetVault.apk" class="nav-btn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download App
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  
+  <h1>Study Smarter With<br/><span>TevetVault</span></h1>
+  <p>Download the app or open it in your browser. Access notes, past papers and study materials shared by students across Malawi completely free.</p>
+  <div class="btns">
+    <!-- APK LINK -->
+    <a href="TevetVault.apk" class="btn-download">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download App (APK)
+    </a>
+    <!-- RENDER URL -->
+    <a href="https://tevetvault.onrender.com" target="_blank" class="btn-view">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      View in Browser
+    </a>
+  </div>
+  <div class="btn-note">APK is for Android phones only &middot; Browser version works on all devices</div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="screenshots">
+  <div class="section-label">App Screenshots</div>
+  <div class="screenshots-row">
+
+    <!--
+    ═══════════════════════════════════════════════
+    HOW TO ADD SCREENSHOTS:
+    1. Take screenshots on your phone
+    2. Upload them to GitHub in the same folder as this file
+    3. Replace each <div class="screenshot-placeholder">...</div>
+       with: <img src="YOUR-FILENAME.jpg" class="screenshot-img"/>
+
+    EXAMPLE:
+    <img src="screenshot-home.jpg" class="screenshot-img"/>
+    ═══════════════════════════════════════════════
+    -->
+
+    <div class="screenshot-wrap">
+      <div class="screenshot-frame">
+        <img src="login.jpg" class="screenshot-img"/>
+        <! -- div class="screenshot-placeholder"
+          <!-- svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <!-- Add Home Screen<br/>screenshot here -->
+        <!--/div -->
+      </div>
+      <div class="screenshot-caption">Login</div>
+    </div>
+
+    <div class="screenshot-wrap">
+      <div class="screenshot-frame">
+        <img src="screenshot-home.jpg" class="screenshot-img"/>
+      </div>
+      <div class="screenshot-caption">Home</div>
+    </div>
+
+    <div class="screenshot-wrap">
+      <div class="screenshot-frame">
+        <img src="screenshot-home.jpg" class="screenshot-img"/>
+      </div>
+      <div class="screenshot-caption">Browser</div>
+    </div>
+
+    <div class="screenshot-wrap">
+      <div class="screenshot-frame">
+       <img src="screenshot-view.jpg" class="screenshot-img"/>
+      </div>
+      <div class="screenshot-caption">View & Download</div>
+    </div>
+
+    <div class="screenshot-wrap">
+      <div class="screenshot-frame">
+       <img src="screenshot-upload.jpg" class="screenshot-img"/>
+       
+      </div>
+      <div class="screenshot-caption">Upload</div>
+    </div>
+
+     <div class="screenshot-wrap">
+      <div class="screenshot-frame">
+       <img src="profile.jpg" class="screenshot-img"/>
+       
+      </div>
+      <div class="screenshot-caption">Profile</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="section-title">What is inside TevetVault</div>
+  <p class="section-sub">Everything you need to study and share with fellow students</p>
+  <div class="features-grid">
+    <div class="feature">
+      <div class="feature-icon">📄</div>
+      <div class="feature-title">Notes & Past Papers</div>
+      <div class="feature-desc">Access revision notes and past examination papers — Fundamental, Occupation and Practical by level.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">👁️</div>
+      <div class="feature-title">View Before Download</div>
+      <div class="feature-desc">Read any PDF, Word or PowerPoint file inside the app before downloading it to your phone.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">⬆️</div>
+      <div class="feature-title">Upload & Share</div>
+      <div class="feature-desc">Upload your own notes and past papers to help other students in your course across Malawi.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔖</div>
+      <div class="feature-title">Bookmark Materials</div>
+      <div class="feature-desc">Save your favourite materials to find them quickly whenever you need to study.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">⭐</div>
+      <div class="feature-title">Rate Materials</div>
+      <div class="feature-desc">Rate materials with stars so the best and most accurate ones rise to the top for everyone.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📲</div>
+      <div class="feature-title">Share via WhatsApp</div>
+      <div class="feature-desc">Share any material link directly to classmates via WhatsApp with just one tap.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📢</div>
+      <div class="feature-title">Annoucements</div>
+      <div class="feature-desc">TEVET updates like exam dates, registration datelines,timetable and manymore.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔔</div>
+      <div class="feature-title">Notifications</div>
+      <div class="feature-desc">Get notified when someone downloads your material. See announcements from admin.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📊</div>
+      <div class="feature-title">Filter by Level</div>
+      <div class="feature-desc">Filter materials by Level 1, 2, 3 or 4 so you only see what is relevant to your class.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HOW TO INSTALL -->
+<section class="install">
+  <div class="install-inner">
+    <div class="section-title" style="text-align:center;margin-bottom:6px">How to install on Android</div>
+    <p class="section-sub">Takes less than 2 minutes</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Download the APK</strong>Tap the green Download App button at the top of this page.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Allow installation</strong>Go to Settings → Security → turn on "Install from unknown sources" or tap "Allow" when your phone asks.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>Open the APK file</strong>Open your Downloads folder, tap the TevetVault file and tap Install.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>Register and start</strong>Open TevetVault, create your free account and start accessing materials immediately.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-title" style="text-align:center;margin-bottom:6px">Frequently Asked Questions</div>
+    <p class="section-sub">Answers to common questions about TevetVault</p>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is TevetVault free to use?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Yes — TevetVault is 100% free for all students. You can register, browse, view, download and upload materials without paying anything. It will always be free.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Why is it not on Google Play Store?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Publishing an app on Google Play Store requires a $25 developer registration fee. Since TevetVault is a free community project built for Malawi students, the APK is distributed directly so that no fees are involved. You can install it safely by downloading the APK from this page.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is the APK safe to install?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Yes, the APK is completely safe. TevetVault is a web app wrapped into an Android package. It does not ask for unnecessary permissions and does not collect any personal data beyond what you provide during registration (email, name, course and college).</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do I need internet to use the app?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Yes, TevetVault requires an internet connection to load and download materials. Once you download a file to your phone you can read it offline. We recommend using WiFi when downloading large files to save your mobile data.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I use it on an iPhone or computer?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>The APK download is for Android phones only. However TevetVault also works as a website that you can open in any browser on iPhone, laptop or desktop computer. Just tap "View in Browser" and it works on any device.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Who can upload materials?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Any registered student can upload materials. We encourage all students to share their notes and past papers to help others. Materials can be reported if they contain wrong or inappropriate content and admin will review and remove them.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Which courses are available?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Currently TevetVault supports ICT, Plumbing, Carpentry, Bricklaying, Automobile Mechanics and Tailoring. All with Level 1 to Level 3 materials. More courses can be added by the admin. If your course is not listed contact us via WhatsApp.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="contact-inner">
+    <div class="section-title" style="margin-bottom:6px">Contact The Developer</div>
+    <p class="section-sub">Have a question, suggestion? Reach out directly</p>
+    <div class="dev-card">
+      <div class="dev-avatar">L</div>
+      <div class="dev-name">Lonjezo Makhaula</div>
+      <div class="dev-role">Developer &amp; Designer</div>
+      <div class="dev-school">ICT Student &middot; Salima Technical College</div>
+      <p style="font-size:13px;color:rgba(255,255,255,.4);margin-top:10px;line-height:1.6">Built TevetVault to help TEVET students across Malawi access and share educational resources easily. Reach out for any help, feedback or to report a problem.</p>
+    </div>
+    <div class="contact-links">
+      <!-- WHATSAPP-->
+      <a href="https://wa.me/265992919010?text=Hello%20Lonjezo%2C%20I%20have%20a%20question%20about%20TevetVault" target="_blank" class="contact-link c-wa">
+        <svg viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <!-- FACEBOOK-->
+      <a href="https://web.facebook.com/lorgodan.makhaura/" target="_blank" class="contact-link c-fb">
+        <svg viewBox="0 0 24 24" fill="#1877f2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        Facebook
+      </a>
+      <!-- EMAIL -->
+      <a href="mailto:lonjezomakhaula@gmail.com" class="contact-link c-em">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fb923c" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        Email
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to start studying?</h2>
+  <p>Join students across Malawi on TevetVault. Free forever.</p>
+  <div class="btns">
+    <a href="TevetVault.apk" class="btn-download">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download App (APK)
+    </a>
+    <a href="https://tevetvault.onrender.com/" target="_blank" class="btn-view">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      View in Browser
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Tevet<span>Vault</span></div>
+  <p>Student Resource Platform &middot; Malawi Technical Colleges<br/>
+ 
+  &copy; 2026 TevetVault &middot; </p>
+</footer>
+
+<script>
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item');
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+</script>
+</body>
+</html>
